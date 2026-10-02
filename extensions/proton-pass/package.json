@@ -90,20 +90,29 @@
       ]
     },
     {
+      "name": "primaryAction",
+      "type": "dropdown",
+      "title": "Primary Action",
+      "description": "What Enter does on an item.",
+      "default": "details",
+      "required": false,
+      "data": [
+        {
+          "title": "View Details",
+          "value": "details"
+        },
+        {
+          "title": "Copy Password",
+          "value": "copy"
+        }
+      ]
+    },
+    {
       "name": "copyPasswordTransient",
       "type": "checkbox",
       "title": "Transient Clipboard",
       "label": "Keep copied secrets out of clipboard history",
-      "description": "Applies to passwords and 2FA codes.",
-      "default": true,
-      "required": false
-    },
-    {
-      "name": "enableBackgroundRefresh",
-      "type": "checkbox",
-      "title": "Background Refresh",
-      "label": "Refresh items in the background",
-      "description": "Even when the cache is still fresh.",
+      "description": "Passwords, 2FA codes, notes and hidden fields.",
       "default": true,
       "required": false
     },
@@ -142,9 +151,18 @@
       ]
     },
     {
+      "name": "enableBackgroundRefresh",
+      "type": "checkbox",
+      "title": "Item List",
+      "label": "Refresh items in the background",
+      "description": "Even when the cache is still fresh.",
+      "default": true,
+      "required": false
+    },
+    {
       "name": "enableWebIntegration",
       "type": "checkbox",
-      "title": "Web Integration",
+      "title": "",
       "label": "Suggest logins for the active browser tab",
       "description": "Requires the Raycast browser extension.",
       "default": true,
@@ -153,9 +171,9 @@
     {
       "name": "showWebsiteIcons",
       "type": "checkbox",
-      "title": "Website Icons",
+      "title": "",
       "label": "Show website icons",
-      "description": "Fetched from Raycast's favicon provider, which receives the domains.",
+      "description": "From Raycast's favicon provider, which receives the domains.",
       "default": false,
       "required": false
     }
